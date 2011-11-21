@@ -11,8 +11,12 @@
 (defun add-dotfile-theme (p)
   (add-to-list 'custom-theme-load-path (concat dotfiles-theme-dir p)))
 
-(add-dotfile-theme "zenburn-emacs/")
-(load-theme 'zenburn)
+;(add-dotfile-theme "zenburn-emacs/")
+(add-dotfile-theme "elisp/themes/")
+;(load-theme 'zenburn)
+
+(load-file (concat dotfiles-theme-dir "almost-monokai/color-theme-almost-monokai.el"))
+(color-theme-almost-monokai)
 
 ;;Or load external files such as this bindings file:
 (load-dotfile "config/bindings.el")
